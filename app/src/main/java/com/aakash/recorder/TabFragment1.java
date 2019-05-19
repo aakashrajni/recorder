@@ -53,12 +53,17 @@ public class TabFragment1 extends Fragment {
 
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.RECORD_AUDIO,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE},
                     RECORD_AUDIO);
-            startRecording();
 
+            try {
+                Thread.sleep(5000);
+                startRecording();
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
         } else {
             startRecording();
         }
-//        startRecording();
 
         return view;
     }

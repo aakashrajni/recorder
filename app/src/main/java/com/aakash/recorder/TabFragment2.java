@@ -33,6 +33,7 @@ public class TabFragment2 extends Fragment {
     int length;
 
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class TabFragment2 extends Fragment {
 
         } else {
             getfile();
+
         }
 
         playorpause = view.findViewById(R.id.play_pause);
@@ -120,7 +122,7 @@ public class TabFragment2 extends Fragment {
         }
     }
 
-    private void getfile() {
+    public  void getfile() {
 
         String path = Environment.getExternalStorageDirectory().getAbsolutePath()+"/saved_records";
         Log.d("Files", "Path: " + path);

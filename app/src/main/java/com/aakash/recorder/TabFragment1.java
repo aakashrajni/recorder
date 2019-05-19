@@ -109,6 +109,7 @@ public class TabFragment1 extends Fragment {
                 stop.setEnabled(false);
                 play.setEnabled(true);
                 Toast.makeText(getContext(), "Audio Recorder stopped", Toast.LENGTH_LONG).show();
+
             }
         });
 
